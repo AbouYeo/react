@@ -1,5 +1,5 @@
 import "./App.css";
-import UsersGrid from "./components/UsersGrid";
+import Users from "./components/Users";
 
 const USERS = [
     {
@@ -186,9 +186,20 @@ const USERS = [
 
 function App() {
     return (
-        <section>
-            <UsersGrid users={USERS} />
-        </section>
+        // <section>
+        //     // <Users users={USERS} />
+        // </section>
+
+        <table className="users-table">
+            <thead>
+                <th> FirstName</th>
+                <th>Last Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Company</th>
+            </thead>
+            <Users users={USERS} />
+        </table>
     );
 }
 
