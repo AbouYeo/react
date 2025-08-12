@@ -1,27 +1,32 @@
+import { useState } from "react";
 import "./App.css";
-import Users from "./pages/Users";
+import RadioShow from "./components/RadioShow";
+import UsersAsGrid from "./pages/users/users_as_grid/UsersAsGrid";
+import UsersAsTable from "./pages/users/users_as_table/UsersAsTable";
 import USERS_DATA from "./utils/Data";
 
 const USERS = USERS_DATA.USERS_DATA;
 
 function App() {
-    return (
-        <section className="grid md:grid-cols-2 gap-4 container-sm">
-            <Users users={USERS} />
-        </section>
+    const [showTable, setShowTable] = useState(true);
 
-        // <table className="users-table mx-auto md:text-base ms:text-sx container-sm bg-gray-400 ">
-        //     <thead>
-        //         <th className="border-3 md:p-2"> FirstName</th>
-        //         <th className="border-3 md:p-2">Last Name</th>
-        //         <th className="border-3 md:p-2">Phone</th>
-        //         <th className="border-3 md:p-2">Email</th>
-        //         <th className="border-3 md:p-2">Company</th>
-        //     </thead>
-        //     <tbody>
-        //         <Users users={USERS} />
-        //     </tbody>
-        // </table>
+    const handleChange = (value: string) => {
+        setShowTable(value == "tableau");
+    };
+
+    return (
+        <>
+            <RadioShow onChange={handleChange} showTable={showTable} />
+            <section className="md:px-20  px-4 container mx-auto">
+                {showTable ? (
+                    <UsersAsTable users={USERS} />
+                ) : (
+                    <div className="grid gap-4  md:grid-cols-2 ">
+                        <UsersAsGrid users={USERS} />
+                    </div>
+                )}
+            </section>
+        </>
     );
 }
 

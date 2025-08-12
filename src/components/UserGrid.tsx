@@ -1,21 +1,6 @@
-type User = {
-    id: string;
-    firstName: string;
-    lastName: string;
-    phone?: string;
-    email?: string;
-    company?: string;
-    address?: Address;
-};
+import type { User } from "../utils/types";
 
-type Address = {
-    street: string;
-    houseNumber: number;
-    city: string;
-    zipcode: number;
-};
-
-function User(user: User) {
+function UserGrid(user: User) {
     return (
         <div className="bg-blue-200 border-2 p-2 rounded-md">
             <p>{user.firstName}</p>
@@ -27,4 +12,4 @@ function User(user: User) {
     );
 }
 
-export default User;
+export default UserGrid;
