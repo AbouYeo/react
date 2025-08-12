@@ -30,7 +30,6 @@ function UsersAsTable(props: Props) {
             <tbody>
                 {users.map((user: User) => (
                     <UserTable
-                        index={0}
                         key={user.id}
                         firstName={user.firstName}
                         lastName={user.lastName}
