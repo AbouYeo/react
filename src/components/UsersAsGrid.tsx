@@ -1,5 +1,5 @@
-import UserGrid from "../../../components/UserGrid";
-import type { User } from "../../../utils/types";
+import type { User } from "../utils/types";
+import UserGrid from "./UserGrid";
 
 type Props = {
     users: User[];

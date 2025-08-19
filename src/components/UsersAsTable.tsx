@@ -1,5 +1,5 @@
-import UserTable from "../../../components/UserTable";
-import type { User } from "../../../utils/types";
+import type { User } from "../utils/types";
+import UserTable from "./UserTable";
 
 type Props = {
     users: User[];
