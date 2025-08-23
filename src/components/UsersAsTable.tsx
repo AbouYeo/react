@@ -10,19 +10,19 @@ function UsersAsTable(props: Props) {
         <table>
             <thead>
                 <tr className="bg-fuchsia-300 border-2">
-                    <th className="border-2 w-fit p-2 md:px-5 md:text-2xl">
+                    <th className="border-1 w-fit p-0.5 md:px-5 md:text-2xl">
                         Prénom
                     </th>
-                    <th className="border-2 w-fit p-2 md:px-5 md:text-2xl">
+                    <th className="border-1 w-fit p-0.5 md:px-5 md:text-2xl">
                         Nom
                     </th>
-                    <th className="border-2 w-fit p-2 md:px-5 md:text-2xl">
+                    <th className="border-1 w-fit p-0.5 md:px-5 md:text-2xl">
                         Telephone
                     </th>
-                    <th className="border-2 w-fit p-2 md:px-5 md:text-2xl">
+                    <th className="border-1 w-fit p-0.5 md:px-5 md:text-2xl">
                         Email
                     </th>
-                    <th className="border-2 w-fit p-2 md:px-5 md:text-2xl">
+                    <th className="border-1 w-fit p-0.5 md:px-5 md:text-2xl">
                         Employeur
                     </th>
                 </tr>
