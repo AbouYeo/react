@@ -1,11 +1,12 @@
 type User = {
     id: string;
     firstName: string;
+    age: number;
     lastName: string;
-    phone?: string;
-    email?: string;
-    company?: string;
-    address?: Address;
+    gender: string;
+    phone: string;
+    company: string;
+    email: string;
 };
 
 type Address = {

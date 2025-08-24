@@ -6,17 +6,7 @@ type Props = {
 };
 function UsersAsGrid(props: Props) {
     const users = props.users;
-    return users.map((user: User) => (
-        <UserGrid
-            firstName={user.firstName}
-            lastName={user.lastName}
-            id={user.id}
-            email={user.email}
-            company={user.company}
-            address={user.address}
-            phone={user.phone}
-        />
-    ));
+    return users.map((user: User) => <UserGrid key={user.id} user={user} />);
 }
 
 export default UsersAsGrid;

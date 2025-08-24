@@ -3,8 +3,8 @@ import "./App.css";
 
 function App() {
     return (
-        <section className="md:px-20  max-sm:px-4 container  mt-2 mx-2">
-            <div className="flex justify-between items-center w-full mx-2 ">
+        <section className=" container  mt-2 mx-1  md:mx-auto">
+            <div className="flex justify-between items-center  ">
                 <Link
                     className=" border rounded py-1 px-2 shadow-xl text-xs "
                     to="/"

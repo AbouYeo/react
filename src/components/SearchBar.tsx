@@ -1,34 +1,39 @@
 type props = {
-    onChange: (value: string) => void;
+    onSearch: (value: string) => void;
+    onFilter: (value: number) => void;
+    filterOrder: number;
 };
-function SearchBar({ onChange }: props) {
+function SearchBar({ onSearch, onFilter, filterOrder }: props) {
     return (
-        <div className="my-3 block w-lvh">
-            <label className="input">
-                <svg
-                    className="h-[1em] opacity-50"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                >
-                    <g
-                        strokeLinejoin="round"
-                        strokeLinecap="round"
-                        strokeWidth="2.5"
-                        fill="none"
-                        stroke="currentColor"
-                    >
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <path d="m21 21-4.3-4.3"></path>
-                    </g>
-                </svg>
+        <div className="flex flex-col sm:flex-row   justify-between items-center my-3 gap-3 ">
+            <label className="flex-grow">
                 <input
                     type="search"
                     name="search-user"
                     required
-                    placeholder="Search"
-                    onChange={(e) => onChange(e.target.value)}
+                    placeholder="Rechercher..."
+                    className="w-full rounded  border-2 ps-2 py-0.5 max-sm:w-screen  "
+                    onChange={(e) => onSearch(e.target.value)}
                 />
             </label>
+            <div className="">
+                <select
+                    title="tri-users"
+                    value={filterOrder}
+                    onChange={(e) => onFilter(parseInt(e.target.value))}
+                    className="bg-zinc-300 rounded border-2 w-fit  px-3 py-1"
+                >
+                    <option disabled value={0}>
+                        Trier par...
+                    </option>
+                    <option value={1}>Hommes</option>
+                    <option value={2}>Femmes</option>
+                    <option value={3}>Age croissant</option>
+                    <option value={4}>Age décroissant</option>
+                    <option value={5}>A-Z</option>
+                    <option value={6}>Z-A</option>
+                </select>
+            </div>
         </div>
     );
 }

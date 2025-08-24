@@ -4,7 +4,7 @@ type props = {
 };
 function RadioShow({ onChange, showTable }: props) {
     return (
-        <div className="flex  w-fit  justify-self-end rounded-xl bg-zinc-500 text-white sticky top-2 ">
+        <div className="flex  w-fit  justify-self-end rounded-xl bg-zinc-500 text-white sticky top-2 max-sm:hidden">
             <div
                 className={`form-check  py-2 px-3 rounded-l-xl ${
                     showTable ? "bg-blue-600" : ""
